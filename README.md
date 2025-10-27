@@ -1,6 +1,6 @@
 # Atelier Implementation - Test-Driven Development
 
-Ce projet contient des interfaces Java que les étudiants doivent implémenter en suivant une approche de développement piloté par les tests (TDD).
+Ce projet contient des interfaces Java que les vous devez implémenter en suivant une approche de développement piloté par les tests (TDD).
 
 ## Structure du Projet
 
@@ -10,12 +10,12 @@ src/
 │   ├── CalcInter.java          # Opérations avancées (multiplication, division)
 │   ├── CalcSimple.java         # Opérations simples (addition, soustraction)
 │   ├── Converteur.java         # Conversion de chaînes (parseInt, parseBool)
-│   ├── Horloge.java           # Gestion du temps (getTimeNow, quelJourDemain)
-│   ├── inverteur.java         # Opérations booléennes (negate, areBothTrue)
-│   ├── MagicPet.java          # Transformation d'animaux (becomeCat, becomeDog)
-│   ├── NombreOp.java          # Opérations sur les nombres (estPair, estPremier)
-│   ├── StringOp.java          # Opérations sur les chaînes (slice, combiner)
-│   └── resource/             # Classes utilitaires
+│   ├── Horloge.java            # Gestion du temps (getTimeNow, quelJourDemain)
+│   ├── inverteur.java          # Opérations booléennes (negate, areBothTrue)
+│   ├── MagicPet.java           # Transformation d'animaux (becomeCat, becomeDog)
+│   ├── NombreOp.java           # Opérations sur les nombres (estPair, estPremier)
+│   ├── StringOp.java           # Opérations sur les chaînes (slice, combiner)
+│   └── resource/               # Classes utilitaires
 │       ├── Animal.java
 │       ├── Chat.java
 │       ├── Chien.java
@@ -32,50 +32,17 @@ src/
     └── StringOpTest.java
 ```
 
-## Instructions pour les Étudiants
+## Instructions
 
 ### 1. Approche Test-Driven Development (TDD)
 
-1. **Lisez les tests** pour comprendre ce que chaque interface doit faire
-2. **Exécutez les tests** - ils vont échouer car les interfaces ne sont pas encore implémentées
-3. **Implémentez les classes** qui satisfont les tests
+1. **Lisez les tests** pour comprendre ce que son interface doit faire
+2. **Exécutez les tests** - ils vont échouer car l'interface n'est pas encore implémentée
+3. **Implémentez la classe** qui satisfera les tests
 4. **Réexécutez les tests** jusqu'à ce qu'ils passent tous
 5. **Refactorisez** votre code si nécessaire
 
-### 2. Comment Commencer
-
-Pour chaque interface, vous devez :
-
-1. **Créer une classe** qui implémente l'interface
-2. **Modifier la méthode `createXXX()`** dans le fichier de test correspondant
-3. **Implémenter toutes les méthodes** de l'interface
-4. **Exécuter les tests** pour vérifier votre implémentation
-
-### 3. Exemple de Démarrage
-
-Pour l'interface `CalcSimple` :
-
-```java
-// 1. Créer une classe qui implémente CalcSimple
-public class MaCalculatrice implements CalcSimple {
-    @Override
-    public int add(int a, int b) {
-        return a + b;
-    }
-    
-    @Override
-    public int diff(int a, int b) {
-        return a - b;
-    }
-}
-
-// 2. Modifier CalcSimpleTest.java
-private CalcSimple createCalculator() {
-    return new MaCalculatrice(); // Remplacer la ligne qui lance l'exception
-}
-```
-
-### 4. Exécution des Tests
+### 2. Exécution des Tests
 
 ```bash
 # Exécuter tous les tests
@@ -122,28 +89,4 @@ mvn test -X
 - `slice(String s, int index)` : Coupe une chaîne en deux au caractère à l'index donné
 - `combiner(Sliced sliced)` : Combine les deux moitiés d'un objet Sliced
 
-## Conseils pour les Étudiants
-
-1. **Commencez simple** : Implémentez d'abord les cas de base, puis les cas complexes
-2. **Lisez attentivement les tests** : Ils vous donnent des indices sur le comportement attendu
-3. **Gérez les cas limites** : Nombres négatifs, chaînes vides, valeurs nulles, etc.
-4. **Testez régulièrement** : Exécutez les tests après chaque modification
-5. **Respectez les conventions** : Nommage, documentation, gestion d'erreurs
-
-## Cas d'Erreurs à Gérer
-
-- **ConverteurException** : Pour les conversions invalides
-- **Valeurs nulles** : Certaines méthodes peuvent recevoir des paramètres null
-- **Valeurs limites** : Integer.MAX_VALUE, Integer.MIN_VALUE
-- **Cas spéciaux** : Chaînes vides, nombres négatifs, etc.
-
-## Objectifs Pédagogiques
-
-- Comprendre le développement piloté par les tests (TDD)
-- Implémenter des interfaces Java
-- Gérer les exceptions
-- Travailler avec les types de données Java (primitifs, objets, collections)
-- Comprendre les concepts de programmation orientée objet
-- Développer des compétences en débogage et test
-
-Bon travail ! 🚀
+Bon courage ! 🚀
