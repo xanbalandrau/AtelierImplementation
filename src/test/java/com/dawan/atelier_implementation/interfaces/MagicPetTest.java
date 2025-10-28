@@ -2,6 +2,7 @@ package com.dawan.atelier_implementation.interfaces;
 
 import com.dawan.atelier_implementation.interfaces.resource.Chat;
 import com.dawan.atelier_implementation.interfaces.resource.Chien;
+import com.dawan.atelier_implementation.solutions.MagicPetSolution;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -16,8 +17,7 @@ class MagicPetTest {
     private MagicPet magicPet = createMagicPet();
 
     private MagicPet createMagicPet() {
-        // TODO: Importez votre class qui implémente MagicPet et returnez la ici
-        throw new UnsupportedOperationException("Students must implement createMagicPet() method");
+        return new MagicPetSolution();
     }
 
     // Tests for becomeCat method
