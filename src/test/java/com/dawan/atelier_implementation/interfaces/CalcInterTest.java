@@ -1,5 +1,6 @@
 package com.dawan.atelier_implementation.interfaces;
 
+import com.dawan.atelier_implementation.solutions.CalcInterSolution;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,8 +13,7 @@ class CalcInterTest {
     private CalcInter calculator = createCalculator();
 
     private CalcInter createCalculator() {
-        // TODO: Importez votre class qui implémente CalcInter et returnez la ici
-        throw new UnsupportedOperationException("Students must implement createCalculator() method");
+        return new CalcInterSolution();
     }
 
     @Test
